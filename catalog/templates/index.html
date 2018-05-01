@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Mixed Group</h1>
+<p>Welcome to <em>LocalLibrary</em>, a very basic Django website developed as a tutorial example on the Mozilla Developer Network.</p>
+<h2>Dynamic content</h2>
+<p>The library has the following record counts:</p>
+    <ul>
+    <li><strong>Teachers:</strong> {{ num_teachers }}</li>
+    <li><strong>Students:</strong> {{ num_students }}</li>
+    <li><strong>Locations:</strong> {{ num_locations }}</li>
+  </ul>
+<p>You have visited this page {{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+<p>Бүгін:{% if weekday == 0 %} Дүйсенбі{% endif %}{% if weekday == 1 %} Сейсенбі{% endif %}{% if weekday == 2 %} Сарсенбі{% endif %}{% if weekday == 3 %} Бейсенбі{% endif %}{% if weekday == 4 %} Жұма{% endif %}{% if weekday == 5 %} Сенбі{% endif %}{% if weekday == 6 %} Жексенбі{% endif %}.</p>
+<p>Бүгіңгі күн: {% if day < 10 %}0{{ day }}{% else %}{{ day }}{% endif %}.{% if month < 10 %}0{{ month }}{% else %}{{ month }}{% endif %}.{% if year < 10 %}0{{ year }}{% else %}{{ year }}{% endif %}</p>
+<p>Қазіргі уақыт: {% if hour < 10 %}0{{ hour }}{% else %}{{ hour }}{% endif %}:{% if minute < 10 %}0{{ minute }}{% else %}{{ minute }}{% endif %}:{% if second < 10 %}0{{ second }}{% else %}{{ second }}{% endif %}</p>
+{% endblock %}

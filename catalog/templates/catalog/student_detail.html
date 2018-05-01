@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Title: {{ student.FirstName}} {{ student.LastName}}</h1>
+
+    <p><strong>FirstName:</strong> <a href="">{{ student.FirstName }}</a></p>
+    <p><strong>LastName:</strong> <a href="">{{ student.LastName }}</a></p>
+    <p><strong>Email:</strong> <a href="">{{ student.Email }}</a></p>
+    <p><strong>DOB:</strong> <a href="">{{ student.date_of_birth }}</a></p>
+    <p><strong>Items:</strong> <a href="">{{ student.Items }}</a></p>
+    <p><strong>Receipts:</strong> <a href="">{{ student.Receipts }}</a></p>
+    <p><strong>Phone Number:</strong> <a href="">{{ student.Phone }}</a></p>
+    <p><strong>Address:</strong> <a href="">{{ student.Address }}</a></p>
+
+{% endblock %}
